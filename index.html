@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katy_birthday</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@400;500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>_</text></svg>">
+</head>
+<body>
+    <!-- 🎵 Аудио элементы -->
+    <audio id="bg-music" loop preload="auto">
+        <source src="assets/bg-music.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="fanfare-sound" loop preload="auto">
+        <source src="assets/fanfare.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- 🎵 Панель управления музыкой -->
+    <div class="music-panel hidden">
+        <button id="music-toggle" class="music-btn" title="Включить/выключить музыку">🔇</button>
+        <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.4" title="Громкость">
+    </div>
+
+    <!-- 🖥 ЭТАП 1: Windows Terminal -->
+    <section id="terminal" class="screen active">
+        <div class="terminal-container">
+            <!-- Заголовок окна Windows -->
+            <div class="window-title">
+                <div class="title-text">C:\Birthday.exe — Katy_birthday</div>
+                <div class="window-controls">
+                    <div class="win-btn minimize" title="Свернуть">—</div>
+                    <div class="win-btn maximize" title="Развернуть">□</div>
+                    <div class="win-btn close" title="Закрыть">×</div>
+                </div>
+            </div>
+            
+            <!-- Контент терминала -->
+            <div class="terminal-content" id="terminal-content">
+                <!-- Содержимое генерируется скриптом -->
+            </div>
+            
+            <!-- Кнопка запуска -->
+            <div class="terminal-action">
+                <span class="prompt">C:\Katy_birthday></span>
+                <button id="run-button" class="cmd-button">run --surprise (click here)</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🔘 ЭТАП 2: Переход -->
+    <section id="transition" class="screen">
+        <div class="transition-content">
+            <div class="transition-text-wrapper">
+                <p class="transition-line">Scroll.</p>
+                <div class="mode-indicator">🎨🌈✨</div>
+            </div>
+            <div class="scroll-hint">↓</div>
+        </div>
+    </section>
+
+    <!-- 📜 ЭТАП 3: Скролл-история -->
+    <main id="scroll-story">
+        <!-- Экран 1 -->
+        <section class="story-screen" id="screen1">
+            <div class="color-bg gradient-1"></div>
+            <div class="floating-elements hearts">💖💕💗💓💝</div>
+            <div class="story-content">
+                <div class="text-photo-wrapper">
+                    <div class="text-block">
+                        <h2>Some people just <span class="text-muted">exist</span>.<br>Others <span class="highlight">move</span>.</h2>
+                    </div>
+                    <div class="photo-block">
+                        <div class="photo-frame">
+                            <img src="assets/photo1.jpg" alt="" loading="lazy">
+                            <div class="photo-overlay"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Экран 2 -->
+        <section class="story-screen" id="screen2">
+            <div class="color-bg gradient-2"></div>
+            <div class="floating-elements stars">⭐🌟💫✨</div>
+            <div class="story-content">
+                <div class="text-photo-wrapper reverse">
+                    <div class="photo-block">
+                        <div class="photo-frame">
+                            <img src="assets/photo2.jpg" alt="" loading="lazy">
+                            <div class="photo-overlay"></div>
+                        </div>
+                    </div>
+                    <div class="text-block">
+                        <h2>You study <span class="highlight">law</span>.<br><span class="text-muted">Not because it's easy.</span><br>But because you can <span class="highlight">handle it</span>.</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Экран 3 -->
+        <section class="story-screen" id="screen3">
+            <div class="color-bg gradient-3"></div>
+            <div class="floating-elements sparks">✦✧❖❈❃</div>
+            <div class="story-content">
+                <div class="text-photo-wrapper">
+                    <div class="text-block">
+                        <h2>You <span class="highlight">train</span>.<br>You choose <span class="highlight">discipline</span><br>over excuses.</h2>
+                        <div class="pulse-line"></div>
+                    </div>
+                    <div class="photo-block">
+                        <div class="photo-frame">
+                            <img src="assets/photo3.jpg" alt="" loading="lazy">
+                            <div class="photo-overlay"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Экран 4 -->
+        <section class="story-screen" id="screen4">
+            <div class="color-bg gradient-4"></div>
+            <div class="floating-elements flowers">🌸🌺🌷🌼🌻</div>
+            <div class="story-content">
+                <div class="text-photo-wrapper reverse">
+                    <div class="photo-block">
+                        <div class="photo-frame">
+                            <img src="assets/photo4.jpg" alt="" loading="lazy">
+                            <div class="photo-overlay"></div>
+                        </div>
+                    </div>
+                    <div class="text-block">
+                        <h2>You don't ask for <span class="text-muted">attention</span>.<br>You just <span class="highlight">get it</span>.</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Экран 5 -->
+        <section class="story-screen" id="screen5">
+            <div class="color-bg gradient-5"></div>
+            <div class="floating-elements sparkles">🎀🎇🎆🧨</div>
+            <div class="story-content">
+                <div class="text-photo-wrapper">
+                    <div class="text-block">
+                        <h2>It's about <span class="text-muted">perfection</span>.<br>It's about <span class="highlight">energy</span>.<br>And you <span class="highlight">have it</span>.</h2>
+                    </div>
+                    <div class="photo-block">
+                        <div class="photo-frame">
+                            <img src="assets/photo5.jpg" alt="" loading="lazy">
+                            <div class="photo-overlay"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Экран 6 -->
+        <section class="story-screen" id="screen6">
+            <div class="color-bg gradient-6"></div>
+            <div class="floating-elements celebrations">🎂🎁🎈🎉🎊</div>
+            <div class="story-content">
+                <div class="text-photo-wrapper centered">
+                    <div class="text-block">
+                        <h2><span class="highlight">Today</span> is your day.<br>And you <span class="highlight">deserve</span> to feel it.</h2>
+                        <button id="finalize-button" class="final-button">
+                            <span class="btn-text">[ finalize (click here)]</span>
+                            <span class="btn-sparkle">✨</span>
+                        </button>
+                    </div>
+                    <div class="photo-block">
+                        <div class="photo-frame">
+                            <img src="assets/photo6.jpg" alt="" loading="lazy">
+                            <div class="photo-overlay"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 🎉 ЭТАП 4: Финал -->
+    <section id="finale" class="screen">
+        <!-- Фоновые фотографии -->
+        <div class="finale-bg-photo finale-bg-photo-1"></div>
+        <div class="finale-bg-photo finale-bg-photo-2"></div>
+        
+        <!-- Canvas для эффектов -->
+        <canvas id="confetti-canvas"></canvas>
+        <canvas id="fireworks-canvas"></canvas>
+        
+        <!-- Темный оверлей для лучшей читаемости -->
+        <div class="finale-overlay"></div>
+        
+        <!-- Контент финала -->
+        <div class="finale-content">
+            <div class="finale-title-wrapper">
+                <h1 class="finale-title">Happy Birthday!</h1>
+                <div class="title-sparkle">✨</div>
+            </div>
+            
+            <p class="finale-subtitle">Stay sharp. Stay active.<br>And don't stop being you.</p>
+            
+            <div class="finale-emoji-bar">
+                <span class="emoji-item">🎂</span>
+                <span class="emoji-item">🎉</span>
+                <span class="emoji-item">🎁</span>
+                <span class="emoji-item">✨</span>
+                <span class="emoji-item">💖</span>
+                <span class="emoji-item">🌸</span>
+                <span class="emoji-item">🌟</span>
+                <span class="emoji-item">🎈</span>
+                <span class="emoji-item">💕</span>
+            </div>
+            
+            <div class="signature">
+            </div>
+            
+            <div class="finale-controls">
+                <button id="replay-button" class="control-btn replay-btn">
+                    <span class="btn-icon">↻</span>
+                    <span class="btn-text">restart</span>
+                </button>
+                <button id="music-control-btn" class="control-btn music-control-btn">
+                    <span class="btn-icon">🔊</span>
+                    <span class="btn-text">toggle music</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
