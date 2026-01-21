@@ -17,7 +17,7 @@ const terminalLines = [
     {prefix: "", text: " mood: active ✔", type: "success"},
     {prefix: "", text: " mindset: pick-me energy detected ✔", type: "success"},
     {prefix: "", text: " faculty: law ✔", type: "success"},
-    {prefix: "", text: " gym_status: consistent ✔", type: "success"},
+    {prefix: "", text: " gym_status: queen ✔", type: "success"},
     {prefix: "", text: "", type: "empty", delay: 300},
     {prefix: ">", text: " Today is not a regular day.", type: "comment", delay: 350},
     {prefix: ">", text: " Running special script...", type: "comment", delay: 300}
@@ -703,4 +703,5 @@ document.addEventListener('DOMContentLoaded', () => {
             img.loading = 'eager';
         });
     });
+
 });
